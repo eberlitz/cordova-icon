@@ -12,22 +12,21 @@ Create an ```icon.png``` or a ```splash.png``` file in the root folder of your c
 
      $ splashicon-generator
 
-For optimal results, your file has to be square, and at least 180*180px.
-To be future-proof, since the generated file dimensions are going to evolve, you should probably use 512*512px or 1024*1024px.
+For optimal results, your icon file has to be square, and at least 1024x1024px and your splash file has a vertical rectangle, and at least 2208x3925px.
 
 ### Requirements
 
-- ImageMagick
+#### ImageMagick
 
 Install on a Mac:
 
      $ brew install imagemagick
 
-On windows see http://www.imagemagick.org/script/binary-releases.php#windows
-
 On linux:
 
     $ sudo apt-get install imagemagick
+
+On windows see http://www.imagemagick.org/script/binary-releases.php#windows
 
 ### Configuring icons
 
@@ -83,34 +82,33 @@ Include in your ```config.xml``` file:
 ```xml
 <platform name="android">
     <!-- you can use any density that exists in the Android project -->
-    <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
-    <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
-    <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
-    <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
-
-    <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
-    <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
-    <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
-    <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+    <splash src="res/android/splash-land-hdpi.png" density="land-hdpi"/>
+    <splash src="res/android/splash-land-ldpi.png" density="land-ldpi"/>
+    <splash src="res/android/splash-land-mdpi.png" density="land-mdpi"/>
+    <splash src="res/android/splash-land-xhdpi.png" density="land-xhdpi"/>
+    <splash src="res/android/splash-port-hdpi.png" density="port-hdpi"/>
+    <splash src="res/android/splash-port-ldpi.png" density="port-ldpi"/>
+    <splash src="res/android/splash-port-mdpi.png" density="port-mdpi"/>
+    <splash src="res/android/splash-port-xhdpi.png" density="port-xhdpi"/>
 </platform>
 
 <platform name="ios">
     <!-- images are determined by width and height. The following are supported -->
-    <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
-    <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
-    <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
-    <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
-    <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
-    <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
-    <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
-    <splash src="res/screen/ios/Default-667h.png" width="750" height="1334"/>
-    <splash src="res/screen/ios/Default-736h.png" width="1242" height="2208"/>
-    <splash src="res/screen/ios/Default-Landscape-736h.png" width="2208" height="1242"/>
+    <splash src="res/ios/Default~iphone.png" width="320" height="480"/>
+    <splash src="res/ios/Default@2x~iphone.png" width="640" height="960"/>
+    <splash src="res/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+    <splash src="res/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+    <splash src="res/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+    <splash src="res/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+    <splash src="res/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+    <splash src="res/ios/Default-667h.png" width="750" height="1334"/>
+    <splash src="res/ios/Default-736h.png" width="1242" height="2208"/>
+    <splash src="res/ios/Default-Landscape-736h.png" width="2208" height="1242"/>
 </platform>
 
 <platform name="wp8">
     <!-- images are determined by width and height. The following are supported -->
-    <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
+    <splash src="res/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
 </platform>
 ```
 
