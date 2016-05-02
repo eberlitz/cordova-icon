@@ -184,8 +184,8 @@ var generateIcon = function(platform, icon) {
             dstPath: filePath,
             quality: 1,
             format: icon.name.replace(/.*\.(\w+)$/i, '$1').toLowerCase(),
-            width: icon.size,
-            height: icon.size,
+            width: icon.width || icon.size,
+            height: icon.height || icon.size,
         }, function(err, stdout, stderr) {
             if (err) {
                 deferred.reject(err);
@@ -321,8 +321,8 @@ var generateSplash = function(platform, splash) {
             dstPath: filePath,
             quality: 1,
             format: splash.name.replace(/.*\.(\w+)$/i, '$1').toLowerCase(),
-            width: splash.width,
-            height: splash.height,
+            width: splash.size || splash.width,
+            height: splash.size || splash.height,
         }, function(err, stdout, stderr) {
             if (err) {
                 console.log('ImageMagick ERROR: ' + err);
