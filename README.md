@@ -2,7 +2,7 @@
 
 # splashicon-generator
 
-Automatic icon and splash screen resizing for PhoneGap. Create an icon in the root folder of your PhoneGap project and use ```icon.png``` and a ```splash.png``` to automatically resize and copy it for all the platforms your project supports (currently works with **iOS**, **Android** and **Windows Phone 8**).
+Automatic icon and splash screen resizing for PhoneGap (and Ionic Framework). Create an icon in the root folder of your PhoneGap project and use ```icon.png``` and a ```splash.png``` to automatically resize and copy it for all the platforms your project supports (currently works with **iOS**, **Android** and **Windows Phone 8**).
 
 Consider using the base icon and splash images in the `model` folder, so that images are not cropped and resized incorrectly.
 
@@ -26,6 +26,24 @@ You can change the default folder for the base images using the argument `images
 
 This will look for an ```icon.png``` and a ```splash.png``` in the **project/assets** folder under the root folder of your cordova project.
 
+#### Ionic Support
+
+You can  change the main platform you are generating resources for, now avaliable plataforms are: `phonegap`(default) and `ionic`.
+Changing the main platform name is usefull to rename and set image dimensions properly, to add a new platform, see the file `platform-catalogues.js`.
+
+Generating resources for ionic:
+
+     $ splashicon-generator --mp='ionic' # also aliased as --main-platform='ionic'
+
+
+### Image Magick Transformation method
+
+By default, the transformation method used to generate **splash** screens is `crop`, which will crop images from the center, if you want to use another transformation method, use:
+
+     $ splashicon-generator  -tm='resize' # also aliased as --transformation-method='resize'
+
+Current supported transformation methods are: `crop`(default) and `resize`(only for splash screens)
+
 ---
 
 ### Requirements
@@ -46,7 +64,7 @@ On windows see http://www.imagemagick.org/script/binary-releases.php#windows
 
 ### Configuring icons
 
-Include in your ```config.xml``` file:
+Include in your ```config.xml``` (only for PhoneGap projects) file:
 
 ```xml
 <icon src="icon.png" />
