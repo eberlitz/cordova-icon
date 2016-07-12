@@ -156,7 +156,11 @@ var getPlatformSplashs = function() {
             { name:"screen-mdpi-portrait.png", width: 320, height: 470, density:"port-mdpi" }, // 480x800
             { name:"screen-mdpi-landscape.png", width: 470, height: 320, density:"land-mdpi" }, // 800x480
             { name:"screen-xhdpi-portrait.png", width: 720, height: 960, density:"port-xhdpi" }, // 720x1280
-            { name:"screen-xhdpi-landscape.png", width: 960, height: 720, density:"land-xhdpi" } // 1280x720
+            { name:"screen-xhdpi-landscape.png", width: 960, height: 720, density:"land-xhdpi" }, // 1280x720
+            { name:"screen-xxhdpi-portrait.png", width: 960, height: 1600, density:"port-xxhdpi" }, // 960x1600
+            { name:"screen-xxhdpi-landscape.png", width: 1600, height: 960, density:"land-xxhdpi" }, // 1600x960
+            { name:"screen-xxxhdpi-portrait.png", width: 1280, height: 1920, density:"port-xxhdpi" }, // 1280x1920
+            { name:"screen-xxxhdpi-landscape.png", width: 1920, height: 1280, density:"land-xxhdpi" } // 1920x1280
         ]
     });
 

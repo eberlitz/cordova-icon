@@ -103,10 +103,14 @@ Include in your ```config.xml``` file:
 <splash gap:platform="android" gap:qualifier="land-ldpi" src="res/screens/android/screen-ldpi-landscape.png" />
 <splash gap:platform="android" gap:qualifier="land-mdpi" src="res/screens/android/screen-mdpi-landscape.png" />
 <splash gap:platform="android" gap:qualifier="land-xhdpi" src="res/screens/android/screen-xhdpi-landscape.png" />
+<splash gap:platform="android" gap:qualifier="land-xxhdpi" src="res/screens/android/screen-xxhdpi-landscape.png" />
+<splash gap:platform="android" gap:qualifier="land-xxxhdpi" src="res/screens/android/screen-xxxhdpi-landscape.png" />
 <splash gap:platform="android" gap:qualifier="port-hdpi" src="res/screens/android/screen-hdpi-portrait.png" />
 <splash gap:platform="android" gap:qualifier="port-ldpi" src="res/screens/android/screen-ldpi-portrait.png" />
 <splash gap:platform="android" gap:qualifier="port-mdpi" src="res/screens/android/screen-mdpi-portrait.png" />
 <splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/screens/android/screen-xhdpi-portrait.png" />
+<splash gap:platform="android" gap:qualifier="port-xxhdpi" src="res/screens/android/screen-xxhdpi-portrait.png" />
+<splash gap:platform="android" gap:qualifier="port-xxxhdpi" src="res/screens/android/screen-xxxhdpi-portrait.png" />
 
 <splash gap:platform="winphone" src="res/screens/wp8/SplashScreenImage.jpg" />
 <splash gap:platform="winphone" src="res/screens/wp8/SplashScreenImage.screen-720p.jpg" />
