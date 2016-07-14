@@ -77,6 +77,19 @@ Include in your ```config.xml``` file:
 <icon gap:platform="winphone" src="res/icons/wp8/ApplicationIcon.png" />
 <icon gap:platform="winphone" src="res/icons/wp8/Background.png" gap:role="background" />
 
+<icon height="150" src="res/icons/windows/Square150x150Logo.scale-100.png" width="150" />
+<icon height="360" src="res/icons/windows/Square150x150Logo.scale-240.png" width="360" />
+<icon height="30" src="res/icons/windows/Square30x30Logo.scale-100.png" width="30" />
+<icon height="" src="res/icons/windows/Square310x310Logo.scale-100.png" width="" />
+<icon height="106" src="res/icons/windows/Square44x44Logo.scale-240.png" width="106" />
+<icon height="70" src="res/icons/windows/Square70x70Logo.scale-100.png" width="70" />
+<icon height="170" src="res/icons/windows/Square71x71Logo.scale-240.png" width="170" />
+<icon height="50" src="res/icons/windows/StoreLogo.scale-100.png" width="50" />
+<icon height="120" src="res/icons/windows/StoreLogo.scale-240.png" width="120" />
+<icon height="150" src="res/icons/windows/Wide310x150Logo.scale-100.png" width="310" />
+<icon height="360" src="res/icons/windows/Wide310x150Logo.scale-240.png" width="744" />
+
+
 ```
 
 ---
@@ -116,6 +129,10 @@ Include in your ```config.xml``` file:
 <splash gap:platform="winphone" src="res/screens/wp8/SplashScreenImage.screen-720p.jpg" />
 <splash gap:platform="winphone" src="res/screens/wp8/SplashScreenImage.screen-WVGA.jpg" />
 <splash gap:platform="winphone" src="res/screens/wp8/SplashScreenImage.screen-WXGA.jpg" />
+
+<splash height="300" src="res/screens/windows/SplashScreen.scale-100.png" width="620" />
+<splash height="1920" src="res/screens/windows/SplashScreen.scale-240.png" width="1152" />
+<splash height="1920" src="res/screens/windows/SplashScreenPhone.scale-240.png" width="1152" />
 ```
 
 ---
