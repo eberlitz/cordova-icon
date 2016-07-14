@@ -202,6 +202,30 @@ Then just add it to the `config.xml`:
 </platform>
 ```
 
+### Configuring icon and splash for Windows
+```xml
+  <platform name="windows">
+    <icon src="resources/windows/icon/Square150x150Logo.scale-100.png" width="150" height="150"/>
+    <icon src="resources/windows/icon/Square150x150Logo.scale-240.png" width="360" height="360"/>
+    <icon src="resources/windows/icon/Square30x30Logo.scale-100.png" width="30" height="30"/>
+    <icon src="resources/windows/icon/Square310x310Logo.scale-100.png" width="310" height="310"/>
+    <icon src="resources/windows/icon/Square44x44Logo.scale-100.png" width="44" height="44"/>
+    <icon src="resources/windows/icon/Square44x44Logo.scale-240.png" width="106" height="106"/>
+    <icon src="resources/windows/icon/Square70x70Logo.scale-100.png" width="70" height="70"/>
+    <icon src="resources/windows/icon/Square71x71Logo.scale-100.png" width="71" height="71"/>
+    <icon src="resources/windows/icon/Square71x71Logo.scale-240.png" width="170" height="170"/>
+
+    <icon src="resources/windows/icon/StoreLogo.scale-100.png" width="50" height="50"/>
+    <icon src="resources/windows/icon/StoreLogo.scale-240.png" width="120" height="120"/>
+    <icon src="resources/windows/icon/Wide310x150Logo.scale-100.png" width="310" height="150"/>
+    <icon src="resources/windows/icon/Wide310x150Logo.scale-240.png" width="744" height="360"/>
+
+    <splash src="resources/windows/splash/SplashScreen.scale-100.png" width="620" height="300"/>
+    <splash src="resources/windows/splash/SplashScreen.scale-240.png" width="1152" height="1920"/>
+    <splash src="resources/windows/splash/SplashScreenPhone.scale-240.png" width="1152" height="1920"/>
+  </platform>
+```
+
 ---
 
 ### License
