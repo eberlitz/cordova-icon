@@ -1,6 +1,6 @@
 var fs = require('fs');
 var path = require('path');
-var ig = require('imagemagick');
+var gm = require('gm');
 var colors = require('colors');
 var _ = require('underscore');
 var Q = require('q');
@@ -273,21 +273,19 @@ var generateIcon = function (platform, icon) {
         if (fs.existsSync(platformIconPath)) {
             srcPath = platformIconPath;
         }
-        ig.resize({
-            srcPath: srcPath,
-            dstPath: filePath,
-            quality: 1,
-            format: icon.name.replace(/.*\.(\w+)$/i, '$1').toLowerCase(),
-            width: icon.size,
-            height: icon.size,
-        }, function (err, stdout, stderr) {
-            if (err) {
-                deferred.reject(err);
-            } else {
-                deferred.resolve();
-                display.success(icon.name + ' created');
-            }
-        });
+        gm(srcPath)
+            .quality(100)
+            .resize(icon.size, icon.size)
+            .setFormat(icon.name.replace(/.*\.(\w+)$/i, '$1').toLowerCase())
+            .write(filePath, function(err){
+                if (err) {
+                    deferred.reject(err);
+                }
+                else{
+                    deferred.resolve();
+                    display.success(icon.name + ' created');
+                }
+            })
     } catch (error) {
         deferred.reject(err);
     }
@@ -381,21 +379,20 @@ var generateSplash = function (platform, splash) {
         if (fs.existsSync(platformIconPath)) {
             srcPath = platformIconPath;
         }
-        ig.crop({
-            srcPath: srcPath,
-            dstPath: filePath,
-            quality: 1,
-            format: splash.name.replace(/.*\.(\w+)$/i, '$1').toLowerCase(),
-            width: splash.width,
-            height: splash.height,
-        }, function (err, stdout, stderr) {
-            if (err) {
-                deferred.reject(err);
-            } else {
-                deferred.resolve();
-                display.success(splash.name + ' created');
-            }
-        });
+
+        gm(srcPath)
+            .gravity('Center')
+            .resize( (splash.width < splash.height)? null : splash.width, (splash.width < splash.height)? splash.height : null)
+            .extent(splash.width, splash.height)
+            .quality(100)
+            .write(filePath, function(err){
+                if (err) {
+                    deferred.reject(err);
+                } else {
+                    deferred.resolve();
+                    display.success(splash.name + ' created');
+                }
+            })
     } catch (error) {
         deferred.reject(err);
     }
