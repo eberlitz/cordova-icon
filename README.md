@@ -51,17 +51,17 @@ You can provide a platform-specific icon by creating a subfolder with the name o
 
 ### Requirements
 
-#### ImageMagick
+#### GraphicsMagick
 
 Install on a Mac:
 
-     $ brew install imagemagick
+     $ brew install graphicsmagick
 
 On linux:
 
-    $ sudo apt-get install imagemagick
+    $ sudo apt-get install graphicsmagick
 
-On windows, see http://www.imagemagick.org/script/binary-releases.php#windows. Also, on the version 7.0.0+ you will have to check the 'Install legacy utilities' option (which is not enabled by default).
+On windows, see http://www.graphicsmagick.org/INSTALL-windows.html.
      
 
 ---
