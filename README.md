@@ -24,7 +24,7 @@ You can change the default folder for the base images using the argument `images
 
 This will look for an ```icon.png``` and a ```splash.png``` in the **project/assets** folder under the root folder of your cordova project.
 
-### Model 
+### Model
 
 Use the Photoshop templates provided in the model folder to generate the PNG files.
 
@@ -62,7 +62,7 @@ On linux:
     $ sudo apt-get install imagemagick
 
 On windows, see http://www.imagemagick.org/script/binary-releases.php#windows. Also, on the version 7.0.0+ you will have to check the 'Install legacy utilities' option (which is not enabled by default).
-     
+
 
 ---
 
@@ -141,18 +141,12 @@ Include in your ```config.xml``` file:
     <splash density="port-xxxhdpi" src="res/screens/android/screen-xxxhdpi-portrait.png" />
 </platform>
 <platform name="ios">
-    <splash width="640" height="1136" src="res/screens/ios/screen-iphone-568h-2x.png" />
-    <splash width="320" height="480" src="res/screens/ios/screen-iphone-portrait.png" />
-    <splash width="640" height="960" src="res/screens/ios/screen-iphone-portrait-2x.png" />
-    <splash width="750" height="1334" src="res/screens/ios/screen-iphone-portrait-667h.png" />
-    <splash width="1242" height="2208" src="res/screens/ios/screen-iphone-portrait-736h.png" />
-    <splash width="2208" height="1242" src="res/screens/ios/screen-iphone-landscape-736h.png" />
-    <splash width="768" height="1024" src="res/screens/ios/screen-ipad-portrait.png" />
-    <splash width="1536" height="2048" src="res/screens/ios/screen-ipad-portrait-2x.png" />
-    <splash width="1024" height="768" src="res/screens/ios/screen-ipad-landscape.png" />
-    <splash width="2048" height="1536" src="res/screens/ios/screen-ipad-landscape-2x.png" />
-    <splash width="2732" height="2048" src="res/screens/ios/screen-ipad-landscape-ipadpro.png" />
-    <splash width="2048" height="2732" src="res/screens/ios/screen-ipad-portrait-ipadpro.png" />
+    <splash src="res/screens/ios/Default@2x~universal~anyany.png" />
+    <splash src="res/screens/ios/Default@2x~universal~comany.png" />
+    <splash src="res/screens/ios/Default@2x~universal~comcom.png" />
+    <splash src="res/screens/ios/Default@3x~universal~anyany.png" />
+    <splash src="res/screens/ios/Default@3x~universal~anycom.png" />
+    <splash src="res/screens/ios/Default@3x~universal~comany.png" />
 </platform>
 <platform name="windows">
     <splash width="620" height="300" src="res/screens/windows/SplashScreen.scale-100.png" />
@@ -178,7 +172,7 @@ More info on [cordova-plugin-splashscreen](https://github.com/apache/cordova-plu
 
 You can use the same configuration of an cordova project just adjusting the xml elements as their documentation says:
 
-[http://docs.phonegap.com/phonegap-build/configuring/icons-and-splash/](http://docs.phonegap.com/phonegap-build/configuring/icons-and-splash/) 
+[http://docs.phonegap.com/phonegap-build/configuring/icons-and-splash/](http://docs.phonegap.com/phonegap-build/configuring/icons-and-splash/)
 
 ---
 
@@ -195,7 +189,7 @@ gulp.task('generate-splashicon', function(done) {
     splashiconGenerator.generate()
     .then(function() {
 
-        // Configure the custom assets with their sizes 
+        // Configure the custom assets with their sizes
         var options = {
             ICON_FILE: path.join('model', 'pushicon.png'),
             SPLASH_FILE: '', // ignore plash generation

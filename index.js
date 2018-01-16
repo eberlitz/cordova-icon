@@ -150,18 +150,12 @@ var getPlatformSplashs = function () {
         isAdded: true,
         splashPath: 'res/screens/ios/',
         splash: [
-            { name: "screen-iphone-portrait.png", width: 320, height: 480 },           // iPhone
-            { name: "screen-iphone-portrait-2x.png", width: 640, height: 960 },        // iPhone Retina
-            { name: "screen-ipad-portrait.png", width: 768, height: 1024 },            // iPad
-            { name: "screen-ipad-portrait-2x.png", width: 1536, height: 2048 },        // iPad Retina
-            { name: "screen-ipad-landscape.png", width: 1024, height: 768 },           // iPad
-            { name: "screen-ipad-landscape-2x.png", width: 2048, height: 1536 },       // iPad Retina
-            { name: 'screen-ipad-landscape-ipadpro.png', width: 2732, height: 2048 }, // iPad Pro
-            { name: 'screen-ipad-portrait-ipadpro.png', width: 2048, height: 2732 }, // iPad Pro
-            { name: "screen-iphone-568h-2x.png", width: 640, height: 1136 },           // iPhone 5 Retina
-            { name: "screen-iphone-portrait-667h.png", width: 750, height: 1334 },     // iPhone 6
-            { name: "screen-iphone-portrait-736h.png", width: 1242, height: 2208 },    // iPhone 6 Plus
-            { name: "screen-iphone-landscape-736h.png", width: 2208, height: 1242 }    // iPhone 6 Plus
+            { name: "Default@2x~universal~anyany.png" , width: 2732 , height: 2732 },
+            { name: "Default@2x~universal~comany.png" , width: 1278 , height: 2732 },
+            { name: "Default@2x~universal~comcom.png" , width: 1334 , height: 750 },
+            { name: "Default@3x~universal~anyany.png" , width: 2208 , height: 2208 },
+            { name: "Default@3x~universal~anycom.png" , width: 2208 , height: 1242 },
+            { name: "Default@3x~universal~comany.png" , width: 1242 , height: 2208 }
         ]
     });
 
